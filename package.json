@@ -1,0 +1,26 @@
+{
+  "name": "graduationproject",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest --config jest.local.js --testTimeout=50000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GazizovRR/graduationProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GazizovRR/graduationProject/issues"
+  },
+  "homepage": "https://github.com/GazizovRR/graduationProject#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "node-fetch": "^2.6.7"
+  }
+}
