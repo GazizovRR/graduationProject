@@ -2,20 +2,18 @@ const { faker } = require('@faker-js/faker')
 
 const BuildPet = function () {
   this.addCategory = function () {
-    this.category = [
-        {
-            id: faker.random.numeric(),
-            name: faker.animal.type()
-        }
-    ]
+    this.category = {
+      id: faker.random.numeric(),
+      name: faker.animal.type()
+    }
     return this
   }
   this.addNickname = function () {
-    this.nickname = faker.name.lastName()
+    this.name = faker.name.lastName()
     return this
   }
   this.addPhoto = function () {
-    this.photo = [
+    this.photoUrls = [
         faker.image.animals()
     ]
     return this

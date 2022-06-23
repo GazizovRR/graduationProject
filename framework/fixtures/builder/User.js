@@ -6,7 +6,7 @@ const BuildUser = function () {
     return this
   }
   this.addLogin = function () {
-    this.login = faker.internet.userName()
+    this.username = faker.internet.userName()
     return this
   }
   this.addFirstName = function () {
@@ -26,7 +26,7 @@ const BuildUser = function () {
     return this
   }
   this.addStatus = function () {
-    this.status = faker.random.numeric()
+    this.userStatus = faker.random.numeric()
     return this
   }
   this.generate = function () {
