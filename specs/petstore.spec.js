@@ -3,29 +3,32 @@ import { BuildPet, BuildOrder, BuildUser, api } from '../framework/index'
 
 describe('Отправляем http запросы', () => {
   let id = 10
-  test.skip('Добавить(зарегистрировать) питомца post api/pet 200', async () => {
-    const pet = new BuildPet().addCategory().addNickname().addPhoto().addTags().addStatus().generate()
-    console.log(pet)
-    /* const pet = {
-      id: 3,
-      category: {
-        id: 513,
-        name: 'Pokemon'
+  test.only('Добавить(зарегистрировать) питомца post api/pet 200', async () => {
+    // const pet = new BuildPet().addCategory().addNickname().addPhoto().addTags().addStatus().generate()
+    // console.log(pet)
+    const pet = new URLSearchParams({
+      "id": 10,
+      "category": {
+        "id": 31,
+        "name": "Pokemon"
       },
-      name: 'Pikachu',
-      tags: [
+      "name": "Pikachu",
+      "photoUrls": [
+        "http://loremflickr.com/640/480/animals"
+      ],
+      "tags": [
         {
-          id: 1,
-          name: 'Pokemon'
+          "id": 7,
+          "name": "Pokemon"
         }
       ],
-      status: 'available'
-    } */
+      "status": "available"
+    })
     const response = await api().Pet().add(header, pet)
     console.log(response)
+    console.log(response.headers)
     const data = await response.json()
     id = data.body.id
-    console.log(data)
     expect(response.status).toEqual(200)
   })
 
