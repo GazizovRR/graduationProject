@@ -18,6 +18,7 @@
   "homepage": "https://github.com/GazizovRR/graduationProject#readme",
   "dependencies": {
     "@babel/preset-env": "^7.16.11",
+    "@faker-js/faker": "^6.3.1",
     "babel-jest": "^27.5.1",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
