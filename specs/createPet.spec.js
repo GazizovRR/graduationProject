@@ -6,7 +6,7 @@ import { BuildPet, api } from '../framework/index'
 describe('Отправляем http запросы', () => {
   let id
   beforeEach(async () => {
-    id = faker.random.numeric()
+    id = faker.datatype.number({ min: 310, max: 320 })
   })
   test('Добавить(зарегистрировать) питомца post api/pet 200', async () => {
     const pet = new BuildPet().addCategory().addNickname().addPhoto().addTags().addStatus().generate()
