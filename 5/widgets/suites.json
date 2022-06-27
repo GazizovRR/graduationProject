@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"84c3f7bd50e028993f077af8f1ee357e","name":"Отправляем http запросы","statistic":{"failed":3,"broken":0,"skipped":0,"passed":14,"unknown":0,"total":17}}]}
+{"total":1,"items":[{"uid":"84c3f7bd50e028993f077af8f1ee357e","name":"Отправляем http запросы","statistic":{"failed":1,"broken":0,"skipped":0,"passed":16,"unknown":0,"total":17}}]}
