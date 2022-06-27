@@ -1,17 +1,17 @@
 import fetch from 'node-fetch'
-import urls from '../config/urls'
+import {urls, header} from '../config/index'
 
 const User = {
-    createUser: async(header, params) => {
-        const response = await fetch(`${urls.petstore}user`, { method: 'POST', headers: header, body: params })
+    createUser: async(params, headers=header) => {
+        const response = await fetch(`${urls.petstore}user`, { method: 'POST', headers: headers, body: params })
         return response
     },
-    getUser: async(header, username) => {
-        const response = await fetch(`${urls.petstore}user/${username}`, { method: 'GET', headers: header })
+    getUser: async(username, headers=header) => {
+        const response = await fetch(`${urls.petstore}user/${username}`, { method: 'GET', headers: headers })
         return response
     },
-    deleteUser: async(header, username) => {
-        const response = await fetch(`${urls.petstore}user/${username}`, { method: 'DELETE', headers: header })
+    deleteUser: async(username, headers=header) => {
+        const response = await fetch(`${urls.petstore}user/${username}`, { method: 'DELETE', headers: headers })
         return response
     },
 };

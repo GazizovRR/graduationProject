@@ -1,25 +1,25 @@
 import fetch from 'node-fetch'
-import urls from '../config/urls'
+import {urls, header} from '../config/index'
 
 const Pet = {
-    add: async(header, params) => {
-        const response = await fetch(`${urls.petstore}pet`, { method: 'POST', headers: header, body: params })
+    add: async(params,headers=header) => {
+        const response = await fetch(`${urls.petstore}pet`, { method: 'POST', headers: headers, body: params })
         return response
     },
-    findById: async(header, id) => {
-        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'GET', headers: header })
+    findById: async(id, headers=header) => {
+        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'GET', headers: headers })
         return response
     },
-    findByStatus: async(header, status) => {
-        const response = await fetch(`${urls.petstore}pet/findByStatus?status=${status}`, { method: 'GET', headers: header })
+    findByStatus: async(status, headers=header) => {
+        const response = await fetch(`${urls.petstore}pet/findByStatus?status=${status}`, { method: 'GET', headers: headers })
         return response
     },
-    updateById: async(header, id, params) => {
-        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'POST', headers: header, body: params })
+    updateById: async(id, params, headers=header) => {
+        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'POST', headers: headers, body: params })
         return response
     },
-    delete: async(header, id) => {
-        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'DELETE', headers: header })
+    delete: async(id, headers=header) => {
+        const response = await fetch(`${urls.petstore}pet/${id}`, { method: 'DELETE', headers: headers })
         return response
     },
 };
