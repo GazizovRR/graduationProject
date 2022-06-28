@@ -19,14 +19,4 @@ describe('Отправляем http запросы', () => {
     const response = await api().User().deleteUser(username)
     expect(response.status).toEqual(200)
   })
-
-  test('Найти пользователя по несуществующему логину get api/user 200', async () => {
-    const response = await api().User().getUser(123)
-    expect(response.status).toEqual(404)
-  })
-
-  test('Удалить пользователя по несуществующему логину get api/user 200', async () => {
-    const response = await api().User().deleteUser('!@#$$%')
-    expect(response.status).toEqual(404)
-  })
 })

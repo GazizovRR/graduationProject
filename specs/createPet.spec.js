@@ -38,16 +38,4 @@ describe('Отправляем http запросы', () => {
     const response = await api().Pet().delete(id)
     expect(response.status).toEqual(200)
   })
-
-  test('Найти питомца по несуществующему ID get api/pet 200', async () => {
-    const response = await api().Pet().findById(0)
-    expect(response.status).toEqual(404)
-  })
-
-  test('Найти питомца по несуществующему статусу get api/pet 200', async () => {
-    const status = faker.random.word()
-    const response = await api().Pet().findByStatus(status)
-    expect(response.status).not.toEqual(200)
-  })
-
 })

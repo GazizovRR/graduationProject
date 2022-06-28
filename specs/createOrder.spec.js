@@ -30,14 +30,4 @@ describe('Отправляем http запросы', () => {
     const response = await api().Store().deleteOrder(orderId)
     expect(response.status).toEqual(200)
   })
-
-  test('Найти заказ на покупку питомца с несуществующим ID get api/store/order 200', async () => {
-    const response = await api().Store().getOrder('-3')
-    expect(response.status).toEqual(404)
-  })
-
-  test('Удалить заказ с несуществующим ID delete api/store/order 200', async () => {
-    const response = await api().Store().deleteOrder(0)
-    expect(response.status).toEqual(404)
-  })
 })
